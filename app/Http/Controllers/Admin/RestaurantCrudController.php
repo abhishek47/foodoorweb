@@ -38,16 +38,16 @@ class RestaurantCrudController extends CrudController
             ['name' => 'cityName', 'label' => 'City'],
         ]);
 
-         $this->crud->addField([   // Upload
-                'name' => 'logo',
-                'label' => 'Restaurant Logo',
-                'type' => 'upload',
-                'upload' => true,
-                'driver' => 'local',
-                'disk' => 'uploads' // if you store files in the /public folder, please ommit this; if you store them in /storage or S3, please specify it;
-            ],  'create');
+        
 
         $this->crud->addFields([
+
+              [   // Browse
+                    'name' => 'logo',
+                    'label' => 'Restaurant Logo',
+                    'type' => 'browse'
+                ],
+
             
             ['name' => 'name', 'label' => 'Name'],
             ['name' => 'slug', 'label' => 'Slug', 'type' => 'hidden', 'value' => 'a'],

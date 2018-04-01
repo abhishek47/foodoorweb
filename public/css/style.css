@@ -11773,6 +11773,7 @@ header.style2 nav {
 .borderless input {
     width: 40px;
     border: none!important;
+
 }
 
 
@@ -11812,4 +11813,10 @@ header.style2 nav {
     margin-bottom: 0px;
     font-weight: 600;
     font-size: 18px;
+}
+
+.qty-counter {
+    background: #efefef;
+    text-align: center;
+    padding: 3px;
 }

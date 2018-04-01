@@ -68,7 +68,7 @@
                      </aside>
                      <div class="col-lg-7 column">
                         <div class="modrn-joblist">
-                          
+                          <div class="alert alert-success m-t-35 m-b-0" role="alert"> <strong>20% off :-</strong> Get 20% off on order above &#8377; 500. </div>
                            <!-- Tags Bar -->
                            <div class="filterbar">
                               <!-- <div class="sortby-sec">
@@ -148,27 +148,27 @@
                                  <tbody>
                                     <tr>
                                        <td>Quesadilla Explosion Salad</td>
-                                       <td><input type="number" name="quantity" value="1" min="1"></td>
+                                       <td><input class="qty-counter" type="number" name="quantity" value="1" min="1"></td>
                                        <td>₹ 200</td>
                                     </tr>
                                     <tr>
                                        <td>Quesadilla Explosion Salad</td>
-                                       <td><input type="number" name="quantity" value="1" min="1"></td>
+                                       <td><input class="qty-counter" type="number" name="quantity" value="1" min="1"></td>
                                        <td>₹ 200</td>
                                     </tr>
                                     <tr>
                                        <td>Quesadilla Explosion Salad</td>
-                                       <td><input type="number" name="quantity" value="1" min="1"></td>
+                                       <td><input class="qty-counter" type="number" name="quantity" value="1" min="1"></td>
                                        <td>₹ 200</td>
                                     </tr>
                                     <tr>
                                        <td>Quesadilla Explosion Salad</td>
-                                       <td><input type="number" name="quantity" value="1"></td>
+                                       <td><input class="qty-counter" type="number" name="quantity" value="1"></td>
                                        <td>₹ 200</td>
                                     </tr>
                                     <tr>
                                        <td>Quesadilla Explosion Salad</td>
-                                       <td><input type="number" name="quantity" value="1"></td>
+                                       <td><input class="qty-counter" type="number" name="quantity" value="1"></td>
                                        <td>₹ 200</td>
                                     </tr>
                                  </tbody>
@@ -184,7 +184,7 @@
                               </div>
                            </div>   
                            <a href="#" title="">Checkout</a>
-                           <p>Free Delivery for orders above &#8377; 250</p>
+                           <p>Get Free Delivery for orders above : &#8377; 250</p>
                         </div>      
                      </div>   
                   </div>
