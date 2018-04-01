@@ -1,12 +1,4 @@
-/*------------------------------------------------------------------
-[Master Stylesheet]
 
-Project:        JOBHUNT
-Version:        Initial
-Last change:    30/12/2017
-Primary use:    Job, Portal 
-Author:         Creative Layer 
--------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------
 1. Fonts
@@ -570,6 +562,7 @@ label::after {
     float: left;
     width: 100%;
     opacity: 0.8;
+    height: 100%;
 }
 .main-slider-sec::before {
     position: absolute;
@@ -623,18 +616,19 @@ label::after {
     margin: 0;
     position: relative;
 }
+.logo a {
+    float: left;
+}
 
 .logo a img {
     width: 165px;
 }
 
-.logo a {
-    float: left;
-}
 .btn-extars {
     float: right;
     margin-top: 2px;
 }
+
 .post-job-btn {
     float: left;
     font-family: Open Sans;
@@ -1052,7 +1046,7 @@ label::after {
 .job-search-sec {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 40%;
     width: 1000px;
     content: "";
     
@@ -1091,11 +1085,11 @@ label::after {
     float: left;
     width: 100%;
     font-family: Open Sans;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 600;
     color: #d5d8f3;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 .job-search form {
     float: left;
@@ -2195,7 +2189,7 @@ header.style2 nav {
     text-align: center;
     color: #ffffff;
     line-height: 87px;
-    
+     background: #d42525;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -2215,7 +2209,7 @@ header.style2 nav {
     float: left;
     width: 100%;
     color: #ffffff;
-    font-size: 13px;
+    font-size: 16px;
     margin: 0;
     margin-top: 1px;
 }
@@ -2246,9 +2240,31 @@ header.style2 nav {
     -o-box-shadow: 0px 2px 4px rgba(0,0,0,0.06);
     box-shadow: 0px 2px 4px rgba(0,0,0,0.06);
 
-    padding: 0px 20px;
+    padding: 0px;
     margin-top: 30px;
+    overflow: hidden;
+    height: 300px;
 }
+
+.job-grid .overlay {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.job-grid .overlay .types-banner-title {
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 42%;
+    width: 100%;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+
 .job-grid .job-title-sec {
     float: left;
     width: 100%;
@@ -2274,7 +2290,6 @@ header.style2 nav {
 }
 .job-grid .job-title-sec span {
     margin-left: 0px;
-    height: 50px;
 }
 .job-grid .fav-job {
     position: absolute;
@@ -2403,31 +2418,16 @@ header.style2 nav {
 }
 
 /* Top Company Sec */
-.text-right {
-    text-align: right!important;
-}
-
-.text-right a {
-    display: block;
-    margin-bottom: 10px;
-    color: #202020;
-    font-weight: 600;
-}
-
 .top-company-sec {
     float: left;
     width: 100%;
     margin-top: -30px;
 }
-
-.padding-0 {
-    padding: 0!important;
-}
-
 .top-compnay {
     float: left;
     width: 100%;
     background: #ffffff;
+    
     -webkit-box-shadow: 0px 2px 4px rgba(0,0,0,0.06);
     -moz-box-shadow: 0px 2px 4px rgba(0,0,0,0.06);
     -ms-box-shadow: 0px 2px 4px rgba(0,0,0,0.06);
@@ -2440,9 +2440,10 @@ header.style2 nav {
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
     border-radius: 8px;
-    padding: 20px 20px;
+
     margin-top: 30px;
     text-align: center;
+    padding: 20px 20px;
     margin-bottom: 6px;
     margin-bottom: 30px;
 }
@@ -2489,17 +2490,16 @@ header.style2 nav {
 }
 .top-company-sec button.slick-arrow {
     z-index: 12;
-    /*border: 2px dashed #c8cccc;*/
+    border: 2px dashed #c8cccc;
     width: 55px;
     height: 55px;
-    background: #fb236a;
-    border: 2px solid #fb236a;
+    
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     border-radius: 50%;
-    color: white;
+
     margin-top: -21px;
 }
 .top-company-sec button.slick-prev.slick-arrow {
@@ -2509,7 +2509,7 @@ header.style2 nav {
     right: -110px;
 }
 .top-company-sec button.slick-arrow::before {
-    /*color: #bec2c2;*/
+    color: #bec2c2;
     line-height: 35px;
 }
 
@@ -2579,13 +2579,13 @@ header.style2 nav {
 }
 .reviews.style2::before {
     font-size: 213px;
-    color: #f4f5fa;
+    color: #202020;
     top: auto;
     bottom: 110px;
 }
 .reviews.style2::after {
     font-size: 213px;
-    color: #f4f5fa;
+    color: #202020;
     top: 30px;
     content: '“';
     bottom: 110px;
@@ -2887,7 +2887,7 @@ header.style2 nav {
     float: none;
     display: inline-block;
     margin: 0;
-    margin-bottom: 0px;
+        margin-bottom: 0px;
     margin-bottom: 20px;
 }
 .links {
@@ -10559,10 +10559,11 @@ terms {
     color: #fb236a;
 }
 
-.btn-extars .post-job-btn:hover {
+/*.btn-extars .post-job-btn:hover {
     background: transparent;
+    border: 2px solid #fb236a;
     color: #FFF;
-}
+}*/
 
 .account-popup > form button:hover{
     background: #fb236a;
@@ -11593,11 +11594,6 @@ header.style4 .account-btns > li a,
     transition: all 0.4s ease 0s;
 }
 /******Custum css******/
-
-.m-l-15 {
-    margin-left: 15px!important;
-}
-
 .dark-bg {
     background-color: #0B1B46;
 }
@@ -11610,57 +11606,30 @@ header.style4 .account-btns > li a,
     margin-top: 0;
 }
 
-.cart-wrapper {
-    margin-top: 36px;  
-    margin-left: 20px;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-.cart-wrapper span {
-    display: block;
-    margin-bottom: 20px;
-    margin-left: 8px;
-}
-
-.cart-wrapper > a {
-    font-family: Open Sans;
-    font-size: 13px;
-    color: #fb236a;
-    border: 1px solid #fb236a;
-    padding: 10px 14px;
-    letter-spacing: 0px;
-    margin: 16px 0;
-    display: block;
-    -webkit-transition: .25s all ease;
-    -moz-transition: .25s all ease;
-    -ms-transition: .25s all ease;
-    -o-transition: .25s all ease;
-    transition: .25s all ease;
-    text-align: center;
-    background: #fb236a;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-.cart-wrapper > a:hover {
-    background: #fb236a;
-    color: #ffffff;
-    border-color: #fb236a;
-}
-
-
-.cart-heading {
-    font-weight: 600;
-    color: #202020;
-    margin-bottom: 5px;
-    margin-left: 10px;
-}
-
 @media(max-width: 767px) {
     .hotel-img-outer {  
         margin-bottom: 10px;
+    }
+
+    .reviews.style2::after {
+        font-size: 100px;
+        color: #202020;
+        top: 140px;
+        content: '“';
+        bottom: 50px;
+        font-family: Quicksand;
+        font-weight: bold;
+        left: 0;
+        right: auto;
+        position: absolute;
+    }
+
+    .reviews.style2::before {
+        font-size: 100px;
+        color: #202020;
+        top: 63px;
+        bottom: 22px;
+        right: 20px;
     }
 }
 
@@ -11703,113 +11672,24 @@ header.style2 nav {
     margin-right: 15px;
 }
 
-.search-job2 form button.my-location-btn {
-    background: none;
-    color: #202020;
-    font-size: 32px;
-    display: block;
-    line-height: 30px;      
-    padding: 0;
+.m-l-15 {
+    margin-left: 15px!important;
 }
 
-.main-banner-section-bg {
-    background: url(../images/resource/header_overlay.jpg);
-    background-size: 100% 100%;
-}
-
-.main-banner-title-text {
+.banner-sub-heading {
+    font-size: 18px;
+    font-weight: 600;
     color: #fff;
-    font-size: 42px;
-    margin-bottom: 12px;
+    opacity: 0.5;
+    margin: 0 0 15px 0;
 }
 
-.main-banner-tagline-text {
-    margin: 0!important;
-    font-size: 18px!important;
-    color: #fff!important;
-    opacity: 0.7!important;
+.display-image {
+    
 }
 
-.m-t-35 {
-    margin-top: 35px !important;
-}
-
-.m-b-0 {
-    margin-bottom: 0 !important;
-}
-
-.text-green {
-    color: green;
-}
-
-.font-bold {
-    font-weight: bold;
-}
-
-.borderless td, .borderless th {
-    border: none!important;
-    font-size: 14px!important;
-    vertical-align: center;
-}
-
-.borderless td p {
-    margin-bottom: 0;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.borderless td span { margin: 0; }
-
-.borderless tr:last-child td {
-    padding-top: 20px;
-}
-
-.borderless td:first-child {
-    font-weight: 600;
-    width: 100px;
-    text-overflow: ellipsis;
-}
-
-.borderless input {
-    width: 40px;
-    border: none!important;
+.display-image .img-background {
+    
 }
 
 
-.table-wrapper {
-    height: 200px;
-    overflow-y: scroll;
-    margin-bottom: 20px;
-}
-
-.subtotal-heading span {
-    margin: 0;
-    font-size: 14px;
-}
-
-.subtotal-wrapper {
-    display: block;
-    margin-bottom: 20px;
-}
-
-.subtotal-heading {
-    padding-left: 8px;
-    display: inline-block;
-    width: 70%;
-}
-
-.subtotal-price {
-    display: inline-block;
-    vertical-align: top;
-    width: 20%;
-}
-
-.subtotal-price p {
-    font-weight: 600;
-}
-
-.subtotal-heading p{
-    margin-bottom: 0px;
-    font-weight: 600;
-    font-size: 18px;
-}

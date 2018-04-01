@@ -31,12 +31,14 @@
                </div>
             </div>
             <div class="responsive-opensec">
+               @guest
                <div class="btn-extars">
                   <a href="{{ route('register') }}" title="" class="post-job-btn">Sign Up</a>
                   <ul class="account-btns">
                      <li class=""><a title="" href="{{ route('login') }}">Login</a></li>
                   </ul>
                </div>
+               @endguest
                <!-- Btn Extras -->
                <!-- <form class="res-search">
                   <input placeholder="Job title, keywords or company name" type="text">
@@ -58,6 +60,25 @@
                          @endforeach
                         </ul>
                      </li>
+                      @auth
+                         <li class="menu-item-has-children">
+                          <a href="{{ route('home') }}" title="">{{ auth()->user()->name }}</a>
+                           <ul>
+                              <li><a href="#" title=""><i class="fa fa-user"></i> Manage Profile</a></li>
+                              <li><a href="#" title=""><i class="fa fa-file-text"></i> My Orders</a></li>
+
+                              <li> <a href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        <i class="fa fa-sign-out"></i>  {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form></li>
+                           </ul>
+                        </li>
+                        @endauth
                   </ul>
                </div>
             </div>
@@ -94,7 +115,7 @@
                         </li>
                         @auth
                          <li class="menu-item-has-children">
-                          <a href="{{ route('home') }}" title="">My Account</a>
+                          <a href="{{ route('home') }}" title="">{{ auth()->user()->name }}</a>
                            <ul>
                               <li><a href="#" title=""><i class="fa fa-user"></i> Manage Profile</a></li>
                               <li><a href="#" title=""><i class="fa fa-file-text"></i> My Orders</a></li>

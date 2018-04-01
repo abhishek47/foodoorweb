@@ -167,41 +167,9 @@
                </div>
             </div>
          </section>
+         
          <section>
             <div class="block">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-lg-12">
-                        <div class="heading">
-                           <h2>How It Works</h2>
-                           <span>Each day, more than 1 thousand Foodies turn to website in their search for food, making over <br>100's of orders every day.
-                           </span>
-                        </div>
-                        <!-- Heading -->
-                        <div class="how-to-sec">
-                           <div class="how-to">
-                              <span class="how-icon"><i class="la la-university"></i></span>
-                              <h3>Choose A Restaurant</h3>
-                              <p>Post a job to tell us about your project. We'll quickly match you with the right freelancers.</p>
-                           </div>
-                           <div class="how-to">
-                              <span class="how-icon"><i class="la la-cutlery"></i></span>
-                              <h3>Choose Your Food</h3>
-                              <p>Browse profiles, reviews, and proposals then interview top candidates. </p>
-                           </div>
-                           <div class="how-to">
-                              <span class="how-icon"><i class="la la-map-marker"></i></span>
-                              <h3>Get Delivered</h3>
-                              <p>Use the Upwork platform to chat, share files, and collaborate from your desktop or on the go.</p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <section>
-            <div class="block gray">
                <div class="container">
                   <div class="row">
                      <div class="col-lg-12">

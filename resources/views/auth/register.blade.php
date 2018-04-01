@@ -56,6 +56,11 @@
                                         <i class="la la-key"></i>
                                     </div>
 
+                                    <div class="cfield">
+                                        <input type="text" name="phone" placeholder="Phone no.">
+                                        <i class="la la-phone"></i>
+                                    </div>
+
                                     <button type="submit">Signup</button>
                                 </form>
                                 <div class="extra-login">

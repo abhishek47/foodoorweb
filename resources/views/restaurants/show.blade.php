@@ -4,7 +4,6 @@
 
 @section('content')
 
-
  <section>
             <div class="block no-padding dark-bg">
                <div class="container">
@@ -21,13 +20,10 @@
                                  <div class="col-sm-7">
                                     <h3 class="restaurant-title text-white">{{ $restaurant->name }}</h3>
                                     <p class="restaurant-address">{{ $restaurant->area }}, {{ $restaurant->city->name }}</p>
-                                    <p class="food-category"><i class="fa fa-cutlery"></i> 
-                                    	@foreach($restaurant->cuisines as $cuisine)
-                                    		{{ $cuisine->name }},
-                                    	@endforeach		
-                                    	
-
-                                    </p>
+                                    <p class="restaurant-address text-green font-bold">Open now</p>
+                                    <p class="food-category"><i class="fa fa-cutlery"></i> @foreach($restaurant->cuisines as $cuisine)
+                                          {{ $cuisine->name }},
+                                       @endforeach    </p>
                                     <div class="features-outer clearfix">
                                        <div class="col-sm-6 feature">
                                           <p class="feature-title"><i class="fa fa-clock-o"></i>  41 Minutes</p>
@@ -42,11 +38,6 @@
                               </div>
                            </div>
                            <div class="page-breacrumbs">
-                              <ul class="breadcrumbs">
-                                 <li><a href="#" title="">Home</a></li>
-                                 <li><a href="#" title="">Restaurant</a></li>
-                                 <li><a href="#" title="">Menu</a></li>
-                              </ul>
                            </div>
                         </div>
                      </div>
@@ -54,6 +45,9 @@
                </div>
             </div>
          </section>
+
+
+
          <section>
             <div class="block no-padding">
                <div class="container">
@@ -62,6 +56,9 @@
                         <div class="widget text-right">
                            <div class="posted_widget" style="">
                            		<a href="{{ route('restaurants.show', ['restaurant' => $restaurant->id]) }}">All Items</a>
+                                 <a href="{{ route('restaurants.show', ['restaurant' => $restaurant->id]) }}">Most Populars</a>
+                                 <a href="{{ route('restaurants.show', ['restaurant' => $restaurant->id]) }}">Veg Items</a>
+                                 <a href="{{ route('restaurants.show', ['restaurant' => $restaurant->id]) }}">Non Veg Items</a>
 	                           	@foreach($restaurant->cuisines as $cuisine)
 	                        		<a href="{{ route('restaurants.show.cuisine', ['restaurant' => $restaurant->id, 'cuisine' => $cuisine->id]) }}">{{ $cuisine->name }}</a>
 	                        	@endforeach	
@@ -121,14 +118,14 @@
                            <div class="job-grid-sec p-l-30 m-t-0">
                               <div class="row">
                               @foreach($items as $item)
-                                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <div class="job-grid">
                                        <div class="job-title-sec">
-                                          <div class="c-logo"> <img src="{{ url($item->photo) }}" style="max-height: 100px;" alt=""> </div>
+                                          <div class="c-logo"> <img src="{{ url($item->photo) }}"  alt=""> </div>
                                           <h3><a href="#" title="">{{ $item->name }}</a></h3>
                                           <span >{{ $item->description }}</span>
                                           <span style="display: block !important;float: none;">&#8377 {{ $item->price }}</span>
-                                          <span class="fav-job"><i class="la la-heart-o"></i></span>
+                                         
                                        </div>
                                        <a href="#" title="">Add to Cart</a>
                                     </div>
@@ -146,33 +143,48 @@
                         <div class="cart-wrapper">
                            <h2 class="cart-heading">Cart</h2>
                            <span>0 Items</span>
-                           <table class="table table-bordered text-center">
-                              <thead>
-                                 <tr>
-                                    <th>Item Name</th>
-                                    <th>Quantity</th>
-                                    <th>Price</th>
-                                 </tr>
-                              </thead>
-                              <tbody>
-                                 <tr>
-                                    <td>John</td>
-                                    <td>1</td>
-                                    <td>₹ 200</td>
-                                 </tr>
-                                 <tr>
-                                    <td>Mary</td>
-                                    <td>1</td>
-                                    <td>₹ 200</td>
-                                 </tr>
-                                 <tr>
-                                    <td>July</td>
-                                    <td>1</td>
-                                    <td>₹ 200</td>
-                                 </tr>
-                              </tbody>
-                           </table>
+                           <div class="table-wrapper">
+                              <table class="table borderless" style="height: 245px;">
+                                 <tbody>
+                                    <tr>
+                                       <td>Quesadilla Explosion Salad</td>
+                                       <td><input type="number" name="quantity" value="1" min="1"></td>
+                                       <td>₹ 200</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Quesadilla Explosion Salad</td>
+                                       <td><input type="number" name="quantity" value="1" min="1"></td>
+                                       <td>₹ 200</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Quesadilla Explosion Salad</td>
+                                       <td><input type="number" name="quantity" value="1" min="1"></td>
+                                       <td>₹ 200</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Quesadilla Explosion Salad</td>
+                                       <td><input type="number" name="quantity" value="1"></td>
+                                       <td>₹ 200</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Quesadilla Explosion Salad</td>
+                                       <td><input type="number" name="quantity" value="1"></td>
+                                       <td>₹ 200</td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>   
+                           <div class="subtotal-wrapper">
+                              <div class="subtotal-heading">
+                                 <p>Subtotal</p>
+                                 <span>Extra charges may applied.</span>
+                              </div>
+                              <div class="subtotal-price">
+                                 <p>&#8377; 1000</p>
+                              </div>
+                           </div>   
                            <a href="#" title="">Checkout</a>
+                           <p>Free Delivery for orders above &#8377; 250</p>
                         </div>      
                      </div>   
                   </div>
